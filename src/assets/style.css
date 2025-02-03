@@ -1,0 +1,18 @@
+/* /src/assets/style.css */
+@import 'normalize.css';
+html, body, #app {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+:root{
+  --primarycolor : #EEEEEE;
+  --secondarycolor: #000000;
+  /* --thirdcolor: #007BF6; */
+  --thirdcolor: #068FFF;
+  --fourthcolor: #313233;
+  /* --fifthcolor: #041C32; */
+  --fifthcolor: #03386A;
+}
