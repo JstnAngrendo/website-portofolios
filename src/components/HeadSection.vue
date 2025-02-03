@@ -2,7 +2,7 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <h1>Justin Portfolios</h1>
+        <h1>Justin | Software Developer </h1>
       </div>
       <nav>
         <div class="hamb" @click="toggleMenu">
