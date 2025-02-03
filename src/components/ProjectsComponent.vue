@@ -144,35 +144,20 @@
     .card-technologies {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 8px;
     }
 
     .tech-badge {
       background-color: #eef2f6;
       color: #2c3e50;
-      font-size: 0.75rem;
+      font-size: 12px;
       font-weight: bold;
-      padding: 0.3rem 0.75rem;
+      padding: 6px 12px;
       border-radius: 20px;
       white-space: nowrap;
     }
 
-    .tech-badge.react {
-      background-color: #61dafb;
-      color: #fff;
-    }
-
-    .tech-badge.vue {
-      background-color: #42b883;
-      color: #fff;
-    }
-
-    .tech-badge.javascript {
-      background-color: #f7df1e;
-      color: #000;
-    }
-
-    .tech-badge.python {
+    .tech-badge {
       background-color: #306998;
       color: #fff;
     }
