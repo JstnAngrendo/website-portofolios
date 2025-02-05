@@ -1,26 +1,5 @@
 <template>
-  <!-- <section class="content-3" id="project">
-    <div class="pTitle">
-      <h1>PROJECTS</h1>
-    </div>
-    <div class="project-row">
-      <div
-        class="project-card"
-        v-for="(project, index) in projects"
-        :key="index"
-      >
-        <h1>{{ project.title }}</h1>
-        <h2>{{ project.description }}</h2>
-        <div class="lang1">
-          <h3 v-for="(lang, i) in project.languages" :key="i">{{ lang }}</h3>
-        </div>
-        <a class="git" :href="project.link" target="_blank">
-          <i class="fa-brands fa-github"></i> github
-        </a>
-      </div>
-    </div>
-  </section> -->
-  <section class="project">
+  <section class="project" id="project">
     <div class="project-title">
       <h1>PROJECTS</h1>
     </div>

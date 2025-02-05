@@ -11,33 +11,17 @@
           <span :class="{ active: menuOpen }"></span>
         </div>
         <ul class="nav-list" :class="{ open: menuOpen }">
-          <li><a href="#home" class="scroll-link">Home</a></li>
-          <li><a href="#skills" class="scroll-link">Skills</a></li>
-          <li><a href="#project" class="scroll-link">Project</a></li>
-          <li><a href="#experience" class="scroll-link">Experience</a></li>
+          <li><a @click.prevent="scrollToSection('home')">Home</a></li>
+          <li><a @click.prevent="scrollToSection('skills')">Skills</a></li>
+          <li><a @click.prevent="scrollToSection('project')">Project</a></li>
+          <li><a @click.prevent="scrollToSection('experience')">Experience</a></li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
 
-<script>
-export default {
-  props: {
-    activeSidebarTitle: String,
-  },
-  data() {
-    return {
-      menuOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.menuOpen = !this.menuOpen;
-    },
-  },
-};
-</script>
+<script src="./js/head-section.js"></script>
 
 <style>
   header {
@@ -135,7 +119,7 @@ export default {
     background-color: var(--fifthcolor);
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
     padding: 16px;
   }

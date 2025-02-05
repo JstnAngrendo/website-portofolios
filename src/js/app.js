@@ -1,10 +1,12 @@
 import { ref } from 'vue'
 import HeadSection from '../components/HeadSection.vue'
+import FooterSection from '@/components/FooterSection.vue'
 
 export default {
   name: 'App',
   components: {
-    HeadSection
+    HeadSection,
+    FooterSection
   },
   setup() {
     const activeMenu = ref('Home')

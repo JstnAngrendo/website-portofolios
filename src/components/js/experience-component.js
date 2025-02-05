@@ -1,12 +1,12 @@
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-import staffLntImg from '@/assets/img/staff-lnt.png';
-import aktivisImg from '@/assets/img/aktivis.png';
-import uncoverYourSkillImg from '@/assets/img/uncover-your-skill.png';
-import BNCCUncoverYourSkillImg from '@/assets/img/bncc-uncover-your-skill.png';
-import certiciateMentorshipImg from '@/assets/img/certificate-scholarship-mentor.png';
-import blibliIntern1 from '@/assets/img/blibli-intern-1.jpg';
-import blibliIntern2 from '@/assets/img/blibli-intern-2.jpg';
+import staffLntImg from '@/assets/img/staff-lnt.png'
+import aktivisImg from '@/assets/img/aktivis.png'
+import uncoverYourSkillImg from '@/assets/img/uncover-your-skill.png'
+import BNCCUncoverYourSkillImg from '@/assets/img/bncc-uncover-your-skill.png'
+import certiciateMentorshipImg from '@/assets/img/certificate-scholarship-mentor.png'
+import blibliIntern1 from '@/assets/img/blibli-intern-1.jpg'
+import blibliIntern2 from '@/assets/img/blibli-intern-2.jpg'
 
 export default {
   name: 'ExperienceComponent',
@@ -42,6 +42,7 @@ export default {
         title: 'Frontend Developer Intern at Blibli.com',
         date: 'September 2023 - Jan 2024',
         description: `<ul>
+        <li>Worked with the Payment Team to enhance transaction processing UI and optimize payment flows.</li>
         <li>Developed user interfaces (UI) using Vue.js, focusing on HTML structure, CSS styling, and JavaScript functionality.</li>
         <li>Identified and resolved bugs and errors during development, ensuring seamless application performance.</li>
         <li>Conducted unit testing to guarantee code quality and optimal functionality.</li>
@@ -51,10 +52,10 @@ export default {
         <li>Documented development processes, including code changes, test cases, and implemented solutions.</li></ul>`,
         images: [blibliIntern1, blibliIntern2]
       }
-    ]);
+    ])
 
     return {
       experiences
-    };
+    }
   }
-};
+}

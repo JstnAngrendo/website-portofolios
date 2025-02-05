@@ -22,11 +22,11 @@ export default {
     }
 
     const startAutoSwitch = () => {
-      let currentIndex = 0;
+      let currentIndex = 0
       let intervalId = setInterval(() => {
-        displayItem(currentIndex);
-        currentIndex = (currentIndex + 1) % skills.value.length;
-      }, 3000);
+        displayItem(currentIndex)
+        currentIndex = (currentIndex + 1) % skills.value.length
+      }, 3000)
     }
 
     onMounted(() => {

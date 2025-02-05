@@ -144,4 +144,35 @@
   .skill-card-item.active::before { 
       opacity: 1;
   }
+
+  @media (max-width: 768px) {
+    .skill-row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left {
+      display: none; /* Hide the left section on small screens */
+    }
+
+    .right {
+      width: 100%;
+    }
+
+    .skill-card-item {
+      width: 90%;
+      padding: 6px 10px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    .skill-card-item img {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    .skill-card-item h1 {
+      font-size: 1rem;
+    }
+  }
 </style>
