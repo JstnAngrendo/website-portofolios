@@ -3,6 +3,7 @@
 html, body, #app {
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 

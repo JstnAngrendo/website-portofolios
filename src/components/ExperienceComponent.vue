@@ -28,6 +28,7 @@
 <style scoped>
 .experience {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .eTitle {
@@ -131,5 +132,41 @@
   margin-top: 16px;
   width: 100%;
   max-width: 400px;
+}
+@media (max-width: 768px) {
+  .line {
+    display: none;
+  }
+
+  .bead {
+    left: 0px;
+  }
+
+  .section {
+    width: 90%; 
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+
+  .experience-item {
+    width: 80%;
+    transform: none; 
+    margin-left: 32px; 
+    padding: 16px;
+  }
+
+  .experience-item.left,
+  .experience-item.right {
+    transform: none;
+    margin-left: 32px;
+  }
+
+  .exp {
+    padding-left: 0;
+  }
+
+  .section img {
+    max-width: 100%;
+  }
 }
 </style>

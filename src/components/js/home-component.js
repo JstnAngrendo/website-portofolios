@@ -1,5 +1,5 @@
-import { ref, onMounted } from "vue";
-import Typed from "typed.js";
+import { ref, onMounted } from "vue"
+import Typed from "typed.js"
 
 export default {
   name: 'HomeComponent',
@@ -19,11 +19,11 @@ export default {
         backSpeed: 60,
         loop: true,
         showCursor: true,
-      });
-    });
+      })
+    })
 
     return { 
       roles 
     }
   }
-};
+}

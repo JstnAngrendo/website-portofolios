@@ -7,7 +7,7 @@
         l am a final year Undergraduate Computer Science student at Bina Nusantara University, currently pursuing my degree. With a strong passion for technology and a dedication to honing my skills, I am eager to share with you my journey, experiences, and projects that have shaped my educational and professional path.
       </p>
       <div class="social">
-        <a href="https://www.instagram.com/justin_luv17/" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
+        <a href="https://www.instagram.com/justinluvian_" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
         <a href="https://www.linkedin.com/in/justin-angrendo" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
         <a href="https://github.com/JstnAngrendo" target="_blank"><font-awesome-icon icon="fa-brands fa-github" /></a>
         <a href="mailto:jluvian25@gmail.com" target="_blank"><font-awesome-icon icon="fa-solid fa-envelope" /></a>
@@ -104,4 +104,73 @@
     background-color: var(--thirdcolor);
     transition: .4s;
   }
+
+  @media (max-width: 895px) {
+  .container {
+    padding: 50px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .social a {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .img-container {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 30px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content h1 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .social a {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    margin-right: 15px;
+  }
+
+  .img-container {
+    display: none;
+  }
+}
 </style>
