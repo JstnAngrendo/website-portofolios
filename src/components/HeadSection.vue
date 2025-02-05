@@ -45,6 +45,7 @@ export default {
     width: 100%;
     padding: 16px 0px;
     background-color: var(--fifthcolor);
+    z-index: 999;
   }
 
   .header-content {

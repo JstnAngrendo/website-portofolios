@@ -66,7 +66,7 @@
       display: flex;
       justify-content: center;
       position: relative;
-      margin-bottom: 2rem;
+      margin-bottom: 32px;
     }
 
     .project-title h1 {
@@ -84,7 +84,7 @@
       bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 78vw; /* Adjust width as needed */
+      width: 78vw;
       height: 2px;
       background-color: var(--primarycolor);
     }
