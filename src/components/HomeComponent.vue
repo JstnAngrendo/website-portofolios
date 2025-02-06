@@ -4,7 +4,7 @@
       <h2>Hello there,</h2>
       <h1>I am <span class="title"></span></h1>
       <p>
-        l am a final year Undergraduate Computer Science student at Bina Nusantara University, currently pursuing my degree. With a strong passion for technology and a dedication to honing my skills, I am eager to share with you my journey, experiences, and projects that have shaped my educational and professional path.
+        I am a Computer Science graduate from Bina Nusantara University with a strong passion for technology and software development. Through my academic journey and hands-on experience, I have built a solid foundation in coding, problem-solving, and creating impactful solutions. I am eager to share with you my journey, projects, and experiences that have shaped my educational and professional path.
       </p>
       <div class="social">
         <a href="https://www.instagram.com/justinluvian_" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>

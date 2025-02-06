@@ -5,9 +5,9 @@ export default {
   setup () {
     const skills = ref([
       { img: new URL('@/assets/img/problem-solving.png', import.meta.url).href, title: 'Problem Solving' },
-      { img: new URL('@/assets/img/teamwork.png', import.meta.url).href, title: 'Teamwork' },
+      { img: new URL('@/assets/img/teamwork.png', import.meta.url).href, title: 'Teamwork & Collaboration' },
       { img: new URL('@/assets/img/leadership.png', import.meta.url).href, title: 'Leadership' },
-      { img: new URL('@/assets/img/web-developer.png', import.meta.url).href, title: 'Web Developer' },
+      { img: new URL('@/assets/img/growth-mindset.png', import.meta.url).href, title: 'Growth Mindset' },
       { img: new URL('@/assets/img/project-management.png', import.meta.url).href, title: 'Project Management' }
     ])
     
