@@ -61,7 +61,6 @@
   .left {
       flex: 1;
       background-color: var(--primarycolor);
-      /* background: linear-gradient(140deg, var(--fifthcolor) -10%,var(--thirdcolor)); */
       margin-left: 2vw;
       text-align: center;
       border-radius: 20px;
@@ -152,7 +151,7 @@
     }
 
     .left {
-      display: none; /* Hide the left section on small screens */
+      display: none;
     }
 
     .right {
