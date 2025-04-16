@@ -4,7 +4,7 @@ export default {
       {
         id: 1,
         title: "Grand City Mall",
-        description: "Designed a responsive mall-themed website as my first front-end project. Features include a store directory, promotional updates, and a membership form with JavaScript validation. Built with HTML, CSS, and JavaScript.",
+        description: "My first ever front-end project — a mall-themed responsive website built with pure HTML, CSS, and JavaScript. Though simple, it laid the foundation for my growth as a developer.",
         longDescription: `<p>The Grand City Mall website was my first front-end project, designed to provide users with a seamless way to explore mall information and store directories. The website is fully responsive, ensuring a great experience across all devices.</p>
         <h3>Key Features:</h3>
         <ul>
@@ -87,6 +87,37 @@ export default {
       },    
       {
         "id": 4,
+        "title": "E-Wallet API Demo",
+        "description": "A backend demo project using Spring Boot and PostgreSQL, featuring user authentication, wallet management, and transaction history. Includes JWT security and Swagger documentation.",
+        "longDescription": `
+        <p>The E-Wallet API Demo is a backend project built using Spring Boot and PostgreSQL to simulate digital wallet operations. The goal of this project was to gain hands-on experience with REST API design, database integration, and secure user authentication.</p>
+        <h3>Key Features:</h3>
+        <ul>
+           <li><strong>User Authentication with JWT</strong>: Implemented secure login and registration flows using JSON Web Tokens for stateless authentication.</li> 
+           <li><strong>Wallet Account Management</strong>: Users can create a wallet, check balance, and manage account-related information.</li> 
+           <li><strong>Transaction History</strong>: Every credit or debit action is logged and retrievable through the transaction history endpoint.</li> 
+           <li><strong>PostgreSQL Integration</strong>: Used PostgreSQL as the relational database to manage structured wallet and transaction data.</li> 
+           <li><strong>Swagger API Documentation</strong>: Integrated Swagger UI to make testing and API understanding easier for developers.</li> 
+        </ul> 
+        <h3>Technologies Used:</h3> 
+        <ul> 
+          <li><strong>Spring Boot</strong>: Built the core application and RESTful API services.</li> 
+          <li><strong>PostgreSQL</strong>: Managed persistent relational data such as users, wallets, and transactions.</li> 
+          <li><strong>JWT</strong>: Provided stateless, token-based authentication for secure API access.</li> 
+          <li><strong>Swagger</strong>: Used for generating interactive documentation of the APIs.</li> 
+          <li><strong>Docker & Docker Compose</strong>: Containerized the application and database to simplify setup and deployment.</li> 
+        </ul> 
+        <p>This project served as a foundational experience for backend development. It enhanced my understanding of API security, RESTful principles, and database-driven application logic — making it a great addition to my portfolio as I apply for backend engineering roles.</p>`,
+        "logo": "ewallet-api-demo.png",
+        "images": [
+          "ewallet-api-demo.png"
+        ],
+        "technologies": ["Spring Boot", "PostgreSQL", "JWT", "Swagger", "Docker"],
+        "link": "https://github.com/JstnAngrendo/ewallet-api-demo"
+      }
+      ,
+      {
+        "id": 5,
         "title": "Ecommerce API Demo",
         "description": "A simple backend project built with Spring Boot and MongoDB to learn API development. It includes basic CRUD operations, user management, and a restriction system for transactions based on product and seller ID. Implemented Swagger for API documentation.",
         "longDescription": `<p>The Ecommerce API Demo is a backend project created to understand the fundamentals of Spring Boot and how to work with MongoDB as a NoSQL database. This project focuses on designing RESTful APIs, handling data persistence, and implementing basic access control for transactions.</p>
@@ -110,9 +141,10 @@ export default {
         ],
         "technologies": ["Spring Boot", "MongoDB", "Swagger"],
         "link": "https://github.com/JstnAngrendo/ecommerce-api-demo"
-      },
+      }
+      ,
       {
-        "id": 5,
+        "id": 6,
         "title": "Website Portfolios",
         "description": "A personal portfolio website built with Vue.js, showcasing my skills, projects, and experience. Uses Pinia for state management and Vite for fast development. Plans for future backend integration using PostgreSQL or MongoDB.",
         "longDescription": `<p>The Website Portfolio is a project designed to showcase my skills, experience, and projects in a structured and visually appealing way. Built using Vue.js, it follows a modular and scalable approach to ensure maintainability and future enhancements.</p>
