@@ -28,9 +28,9 @@
 
   .main-container {
     flex-grow: 1;
-    background-color: #F4F7FB;
+    background-color: #1F2A30;
     background-size: cover;
-    background: linear-gradient(90deg, #0E222A 0%, #333333 100%); 
+    /* background: linear-gradient(90deg, #0E222A 0%, #333333 100%);  */
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 92px;
   }
