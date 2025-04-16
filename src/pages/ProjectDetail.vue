@@ -122,7 +122,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--fifthcolor);
+  background-color: #1A2B31;
   color: var(--primarycolor);
   text-decoration: none;
   font-weight: bold;
@@ -137,7 +137,7 @@
 }
 
 .project-link:hover {
-  background-color: var(--thirdcolor);
+  background-color: var(--hovercolor);
   transform: scale(1.05);
 }
 

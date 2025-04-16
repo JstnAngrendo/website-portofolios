@@ -137,7 +137,7 @@
     }
 
     .tech-badge {
-      background-color: #306998;
+      background-color: var(--thirdcolor);
       color: #fff;
     }
 

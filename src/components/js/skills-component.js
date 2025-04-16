@@ -1,45 +1,80 @@
-import { onMounted, ref } from "vue"
+import { ref, computed } from "vue"
 
 export default {
   name: 'SkillsComponent',
   setup () {
+    const showMore = ref(false)
     const skills = ref([
-      { img: new URL('@/assets/img/problem-solving.png', import.meta.url).href, title: 'Problem Solving' },
-      { img: new URL('@/assets/img/teamwork.png', import.meta.url).href, title: 'Teamwork & Collaboration' },
-      { img: new URL('@/assets/img/leadership.png', import.meta.url).href, title: 'Leadership' },
-      { img: new URL('@/assets/img/growth-mindset.png', import.meta.url).href, title: 'Growth Mindset' },
-      { img: new URL('@/assets/img/project-management.png', import.meta.url).href, title: 'Project Management' }
+      {
+        icon: "💻",
+        title: "Frontend Development",
+        description: "Vue.js, React.js, JavaScript, HTML, CSS, responsive design",
+      },
+      {
+        icon: "⚙️",
+        title: "Backend Basics",
+        description: "Node.js, Express, Laravel, Spring Boot, REST APIs",
+      },
+      {
+        icon: "🗄️",
+        title: "Database",
+        description: "MySQL, PostgreSQL, MongoDB",
+      },
+      {
+        icon: "🧪",
+        title: "Testing",
+        description: "Unit testing, QA2 testing, monitoring in production",
+      },
+      {
+        icon: "🎨",
+        title: "UI/UX",
+        description: "Minimal design with consistent color schemes",
+      },
+      {
+        icon: "🧠",
+        title: "Problem Solving",
+        description: "Logical thinking and debugging skills",
+      },
+      {
+        icon: "💡",
+        title: "Creative Thinking",
+        description: "Innovative solutions, out-of-the-box approaches.",
+      },
+      {
+        icon: "🤝",
+        title: "Teamwork & Collaboration",
+        description: "Contributing to team goals and supporting others.",
+      },
+      {
+        icon: "🌱",
+        title: "Adaptability",
+        description: "Adjusting quickly to changing environments.",
+      },
+      {
+        icon: "🗣️",
+        title: "Communication",
+        description: "Clear and effective communication with all team members",
+      },
+      {
+        icon: "🚀",
+        title: "Initiative",
+        description: "Proactively identifying opportunities and taking action",
+      },
+      {
+        icon: "⏱️",
+        title: "Time Management",
+        description: "Efficiently prioritizing and meeting deadlines",
+      }
     ])
-    
-    const displayedImage = ref(skills.value[0].img)
-    const displayedTitle = ref(skills.value[0].title)
-    const displayedText = ref(skills.value[0].details)
 
-    const displayItem = (index) => {
-      displayedImage.value = skills.value[index].img
-      displayedTitle.value = skills.value[index].title
-      displayedText.value = skills.value[index].details
-    }
-
-    const startAutoSwitch = () => {
-      let currentIndex = 0
-      let intervalId = setInterval(() => {
-        displayItem(currentIndex)
-        currentIndex = (currentIndex + 1) % skills.value.length
-      }, 3000)
-    }
-
-    onMounted(() => {
-      startAutoSwitch()
+    const visibleSkills = computed(() => {
+      return showMore.value ? skills.value : skills.value.slice(0, 8)
     })
 
-
     return {
+      showMore,
       skills,
-      displayItem,
-      displayedImage,
-      displayedText,
-      displayedTitle
+      visibleSkills
     }
   }
 }

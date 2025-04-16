@@ -6,7 +6,7 @@
 
 <style scoped>
   footer{
-    background-color: var(--fifthcolor);
+    background-color:var(--navbgcolour);
     width: 100%;
     padding: 5px 0px;
     position: relative;

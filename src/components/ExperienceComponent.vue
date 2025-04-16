@@ -29,6 +29,7 @@
 .experience {
   width: 100%;
   margin-bottom: 10px;
+  background: #1A2B31;
 }
 
 .eTitle {
