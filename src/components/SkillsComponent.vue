@@ -36,7 +36,7 @@
   right: 0;
   bottom: 0;
   background: #1A2B31;
-  opacity: 0.8;
+  opacity: 0.4;
   z-index: -1;
 }
 
@@ -50,7 +50,6 @@
   max-width: 1250px;
   height: 3px;
   background-color: var(--thirdcolor);
-  /* margin: 10px 0 20px 0; */
   border: none;
 }
 .skills-grid {
@@ -106,4 +105,29 @@
 .toggle-btn:hover {
   background-color: var(--hovercolor);
 }
+
+@media (max-width: 675px) {
+  .skills-section {
+    padding: 15vw 8vw;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .skill-card {
+    padding: 3rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .skill-card p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
 </style>

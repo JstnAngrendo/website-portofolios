@@ -1,8 +1,7 @@
 <template>
   <section class="project" id="project">
-    <div class="project-title">
-      <h1>PROJECTS</h1>
-    </div>
+    <h1 class="project-title">PROJECTS</h1>
+    <hr class="underline" />
     <div class="portfolio-container">
       <div class="project-card" 
         v-for="project in projectList" 
@@ -14,7 +13,11 @@
           :style="{ backgroundImage: `url(${project.logo})` }"
         ></div>
         <div class="card-content">
-          <h2 class="card-title">{{ project.title }}</h2>
+          <div class="card-header">
+            <h2 class="card-title">{{ project.title }}</h2>
+            <span class="card-year">{{ project.year }}</span>
+          </div>
+
           <p class="card-description">{{ project.description }}</p>
           <div class="card-technologies">
             <span
@@ -36,36 +39,25 @@
 
 <style scoped>
     .project {
+      padding: 5vw 8vw;
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
     }
     .project-title {
-      display: flex;
-      justify-content: center;
+      font-size: 40px;
+      margin-bottom: 20px;
       position: relative;
-      margin-bottom: 32px;
-    }
-
-    .project-title h1 {
-      text-align: center;
-      font-size: 3rem;
       color: var(--primarycolor);
-      position: relative;
-      z-index: 1;
-      display: inline-block;
     }
 
-    .project-title h1::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 78vw;
-      height: 2px;
-      background-color: var(--primarycolor);
+    .underline {
+      width: 100%;
+      max-width: 1250px;
+      height: 3px;
+      background-color: var(--thirdcolor);
+      border: none;
+      margin-bottom: 2rem;
     }
 
     .portfolio-container {
@@ -79,24 +71,49 @@
 
     /* Card Styles */
     .project-card {
-      background-color: #fff;
-      border-radius: 12px;
+      background: #233C43;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
+      /* opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: calc(0.1s * var(--index)); */
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
+
 
     .card-image {
       height: 180px;
       background-size: cover;
       background-position: center;
+      position: relative;
+      border-bottom: 5px solid #9e7f59;
+    }
+
+    .card-image::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent); */
     }
 
     .card-content {
@@ -107,16 +124,35 @@
       justify-content: space-between;
     }
 
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-year {
+      font-weight: 700;
+      color: #f4d4ab;
+      font-size: 0.95rem;
+      border: 2px solid #f4d4ab;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background-color: transparent;
+      font-family: 'Poppins', sans-serif;
+    }
+
     .card-title {
       font-size: 1.25rem;
       font-weight: bold;
-      margin-bottom: 0.5rem;
+      /* margin-bottom: 0.5rem; */
+      color: #fff;
     }
 
     .card-description {
       font-size: 0.9rem;
       margin-bottom: 1rem;
-      color: #555;
+      color: #fff;
     }
 
     /* Technology Badges */
@@ -127,21 +163,31 @@
     }
 
     .tech-badge {
-      background-color: #eef2f6;
-      color: #2c3e50;
+      background: rgba(0, 128, 255, 0.1);
+      color: #00cfff;
+      border: 1px solid #00cfff;
       font-size: 12px;
-      font-weight: bold;
-      padding: 6px 12px;
+      font-weight: 600;
+      padding: 5px 10px;
       border-radius: 20px;
-      white-space: nowrap;
+      transition: background 0.3s ease;
     }
 
-    .tech-badge {
-      background-color: var(--thirdcolor);
-      color: #fff;
+    .tech-badge:hover {
+      background: #00cfff;
+      color: #000;
+    }
+
+    @media (max-width: 1024px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 675px) {
+      .project {
+        padding: 15vw 8vw;
+      }
       .portfolio-container {
         grid-template-columns: 1fr;
       }

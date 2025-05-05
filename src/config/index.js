@@ -27,6 +27,7 @@ export default {
         ],
         technologies: ["HTML", "CSS", "JavaScript"],
         link: "https://github.com/JstnAngrendo/GrandCityMall",
+        year: '2022'
       },
       {
         id: 2,
@@ -56,6 +57,7 @@ export default {
         ],
         technologies: ["Laravel", "PHP", "TMDb API", "Blade", "MySQL"],
         link: "https://github.com/JstnAngrendo/Film_Max",
+        year: '2023'
       },
       {
         id: 3,
@@ -84,6 +86,7 @@ export default {
         ],
         technologies: ["ASP.NET", "C#", "MySQL", "CSS"],
         link: "https://github.com/JoelGertino/KpopZtation_ASP.net",
+        year: '2022'
       },    
       {
         "id": 4,
@@ -113,7 +116,8 @@ export default {
           "ewallet-api-demo.png"
         ],
         "technologies": ["Spring Boot", "PostgreSQL", "JWT", "Swagger", "Docker"],
-        "link": "https://github.com/JstnAngrendo/ewallet-api-demo"
+        "link": "https://github.com/JstnAngrendo/ewallet-api-demo",
+        year: '2025'
       }
       ,
       {
@@ -140,7 +144,8 @@ export default {
           "ecommerce-api-demo-1.png"
         ],
         "technologies": ["Spring Boot", "MongoDB", "Swagger"],
-        "link": "https://github.com/JstnAngrendo/ecommerce-api-demo"
+        "link": "https://github.com/JstnAngrendo/ecommerce-api-demo",
+        year: '2024'
       }
       ,
       {
@@ -173,7 +178,8 @@ export default {
           "website-portfolios-1.png"
         ],
         "technologies": ["Vue.js", "Pinia", "Vite", "Vitest"],
-        "link": "https://github.com/JstnAngrendo/website-portfolios"
+        "link": "https://github.com/JstnAngrendo/website-portfolios",
+        year: '2025'
       }      
     ]
   }

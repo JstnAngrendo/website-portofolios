@@ -1,5 +1,5 @@
 <template>
-  <section class="about-section">
+  <section class="about-section" id="about">
     <h2 class="section-title">
       <font-awesome-icon icon="code-branch" class="icon-style" />  About Me
     </h2>
@@ -7,18 +7,24 @@
     <div class="about-content">
       <div class="about-text">
         <p>
-          Hello! I'm a passionate front-end developer who enjoys turning ideas into interactive, user-friendly web experiences.
-          My work focuses on building responsive and modern interfaces using Vue.js and JavaScript, with attention to clean code and performance.
+          Hello! I'm a passionate software engineer with hands-on experience in both front-end and back-end development. I enjoy building user-friendly interfaces and developing systems that are clean, efficient, and scalable.
         </p>
         <p>
-          During my time at Blibli as a Software Engineer Intern, I had the opportunity to contribute to real-world projects, solve bugs,
-          write unit tests, and collaborate across teams. These experiences have deepened my technical understanding and strengthened my growth mindset.
+          While I have a strong grasp of both client-side and server-side technologies, I'm especially enjoying diving deeper into backend engineering. I'm currently focused on sharpening my backend skills through hands-on projects, learning best practices, and aligning my work with real-world industry standards. With the goal of growing into a versatile full-stack developer and confidently transitioning into backend-focused roles
         </p>
         <p>
-          Beyond coding, I love exploring design systems, learning new technologies, and helping others grow — whether through mentorship or collaboration.
+          Outside of coding, I'm always eager to explore new tools and deepen my understanding of software development. I'm driven by curiosity and a genuine passion to grow both independently and through collaboration with others in the tech community.
         </p>
-        <a href="/your-cv.pdf" class="download-cv-btn" download>Download CV</a>
+        <a 
+          href="https://drive.google.com/file/d/17vuCz60pGMK2wcmkYaSRq3GjjGHXTh7E/view?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="download-cv-btn" 
+        >
+          Download CV
+        </a>
       </div>
+      
       <div class="about-image-wrapper">
         <!-- Blob SVG as background -->
         <div class="blob-container">
@@ -50,7 +56,7 @@
   right: 0;
   bottom: 0;
   background: #1A2B31;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: -1;
 }
 
@@ -81,7 +87,7 @@
 .about-text {
   flex: 1;
   min-width: 280px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.8;
   text-align: justify;
 }
@@ -145,6 +151,15 @@
   display: block;
   border: 4px solid white;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 895px) {
+  .about-section {
+    padding: 20vw 8vw;
+  }
+  .about-image-wrapper {
+    display: none;
+  }
 }
 
 </style>
