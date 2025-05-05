@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "public": true,
+  "headers": [
+    {
+      "source": "/finisher-header.es5.min.js",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    }
+  ]
+}
