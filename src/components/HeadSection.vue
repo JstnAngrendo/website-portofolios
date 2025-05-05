@@ -26,8 +26,10 @@
 <style>
   header {
     position: fixed;
-    width: 100vw;
+    top: 0;
+    left: 0;
     padding: 17px 0px;
+    width: 100%;
     /* background: linear-gradient(90deg, #0E222A 0%, #333333 100%); */
     background-color:var(--navbgcolour);
     z-index: 999;
