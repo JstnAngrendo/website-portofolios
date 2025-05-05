@@ -16,13 +16,14 @@ export default {
     const menuOpen = ref(false)
 
     const scrollToSection = (id) => {
-      router.push({ path: '/', hash: `#${id}` })
-      nextTick(() => {
-        const element = document.getElementById(id)
+      if (router.currentRoute.value.path === '/') {
+        const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
+          element.scrollIntoView({ behavior: 'smooth' });
         }
-      })
+      } else {
+        router.push({ path: '/', hash: `#${id}` });
+      }
     }
 
     const toggleMenu = () => {

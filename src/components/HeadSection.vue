@@ -31,7 +31,7 @@
     padding: 17px 0px;
     width: 100%;
     /* background: linear-gradient(90deg, #0E222A 0%, #333333 100%); */
-    background-color:var(--navbgcolour);
+    /* background-color:var(--navbgcolour); */
     z-index: 999;
   }
 
@@ -114,12 +114,15 @@
   .hamb {
     display: block;
   }
+  header {
+    background-color: var(--navbgcolour);
+  }
 
   .nav-list {
     display: none; 
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--fifthcolor);
+    background-color: var(--navbgcolour);
     position: absolute;
     top: 100%;
     left: 0;

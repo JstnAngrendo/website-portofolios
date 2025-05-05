@@ -6,7 +6,7 @@
       <h3 class="subtitle">Driven to engineer better digital solutions</h3>
       
       <div class="button-group">
-        <a href="mailto:your.email@example.com" class="techno-button">Contact Me</a>
+        <a href="jluvian25@gmail.com" class="techno-button">Contact Me</a>
         <a href="#about" class="techno-button secondary">Get to Know Me</a>
       </div>
 
@@ -20,10 +20,6 @@
       </div>
     </div>
     <div id="profile-video" class="profile-video"></div>
-    <!-- <div class="img-container">
-      <img class="profile" src="@/assets/img/Foto-Profile-Transparan.png" alt="">
-      
-    </div> -->
   </div>
 </template>
 
@@ -35,6 +31,7 @@
     padding: 80px 150px 80px 150px;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
   }
   
   .content{
@@ -171,6 +168,13 @@
     padding: 50px;
     flex-direction: column;
     text-align: center;
+  }
+
+  .profile-video {
+    order: -1;
+    margin-left: 0;
+    width: 100%;
+    max-width: 350px;
   }
 
   .content {
