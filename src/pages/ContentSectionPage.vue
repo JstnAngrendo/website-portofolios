@@ -1,5 +1,7 @@
 <template>
   <HomeComponent />
+  <!-- <FinisherBackground /> -->
+  <AboutComponent />
   <SkillsComponent />
   <ProjectsComponent />
   <ExperienceComponent />

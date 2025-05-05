@@ -1,6 +1,7 @@
 <template>
   <section class="skills-section" id="skills">
     <h2 class="skill-title">SKILLS</h2>
+    <hr class="underline" />
     <div class="skills-grid">
       <div
         class="skill-card"
@@ -23,32 +24,42 @@
 <style scoped>
 .skills-section {
   padding: 5vw 8vw;
-  background: 	#1A2B31;
   color: #ffffff;
   text-align: center;
+  position: relative;
+}
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1A2B31;
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .skill-title {
   font-size: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   position: relative;
 }
 
-.skill-title::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%; 
-    transform: translateX(-50%);
-    width: 78vw; 
-    height: 2px;
-    background-color: var(--primarycolor);
+.underline {
+  max-width: 1250px;
+  height: 3px;
+  background-color: var(--thirdcolor);
+  border: none;
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  /* justify-content: center; */
 }
 
 .skill-card {
@@ -94,4 +105,29 @@
 .toggle-btn:hover {
   background-color: var(--hovercolor);
 }
+
+@media (max-width: 675px) {
+  .skills-section {
+    padding: 15vw 8vw;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .skill-card {
+    padding: 3rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .skill-card p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
 </style>

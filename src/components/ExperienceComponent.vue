@@ -27,7 +27,9 @@
 
 <style scoped>
 .experience {
+  padding: 5vw 0vw;
   width: 100%;
+  margin-top: 100px;
   margin-bottom: 10px;
   background: #1A2B31;
 }
@@ -135,6 +137,9 @@
   max-width: 400px;
 }
 @media (max-width: 768px) {
+  .experience {
+    padding: 15vw 0vw;
+  }
   .line {
     display: none;
   }

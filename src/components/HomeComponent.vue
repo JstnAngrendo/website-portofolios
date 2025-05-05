@@ -3,9 +3,14 @@
     <div class="content">
       <h2>Hello there,</h2>
       <h1>I am <span class="title"></span></h1>
-      <p>
-        I am a Computer Science graduate from Bina Nusantara University with a strong passion for technology and software development. Through my academic journey and hands-on experience, I have built a solid foundation in coding, problem-solving, and creating impactful solutions. I am eager to share with you my journey, projects, and experiences that have shaped my educational and professional path.
-      </p>
+      <h3 class="subtitle">Driven to engineer better digital solutions</h3>
+      
+      <div class="button-group">
+        <a href="jluvian25@gmail.com" class="techno-button">Contact Me</a>
+        <a href="#about" class="techno-button secondary">Get to Know Me</a>
+      </div>
+
+      
       <div class="social">
         <a href="https://www.instagram.com/justinluvian_" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
         <a href="https://www.linkedin.com/in/justin-angrendo" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
@@ -14,9 +19,7 @@
         <a href="https://facebook.com" target="_blank"><font-awesome-icon icon="fa-brands fa-facebook-square" /></a>
       </div>
     </div>
-    <div class="img-container">
-      <img class="profile" src="@/assets/img/Foto-Profile-Transparan.png" alt="">
-    </div>
+    <div id="profile-video" class="profile-video"></div>
   </div>
 </template>
 
@@ -25,14 +28,16 @@
 <style scoped>
   .container{
     display: flex;
-    padding: 70px 150px;
+    padding: 80px 150px 80px 150px;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
   }
   
   .content{
     display: flex;
     flex-direction: column;
+    max-width: 600px;
     width: 50%;
   } 
   
@@ -40,16 +45,26 @@
     color: var(--thirdcolor);
   }
 
-  .img-container {
-    width: 400px;
-    height: 400px;
+  /* .img-container {
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
-    background: rgba(62, 62, 62, 0.30);
+    background: rgba(181, 165, 165, 0.3);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  } */
+
+  /* .profile-video {
+    width: 100%;
+    height: 100%;
+  } */
+
+  .profile-video{
+    width: 550px;
+    margin-left: 3rem;
   }
 
   .profile {
@@ -59,10 +74,10 @@
     transition: transform 0.5s ease-in-out;
   }
 
-  .img-container:hover {
+  /* .img-container:hover {
     transform: scale(1.1);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-  }
+  } */
 
   .profile:hover {
     transform: scale(1.05);
@@ -71,19 +86,22 @@
   .content h2{
     color: var(--primarycolor);
     margin-bottom: 1px;
-    font-size: 32px;
+    font-size: 36px;
   }
   .content h1{
     color: var(--primarycolor);
     margin-bottom: 1px;
-    font-size: 26px;
+    font-size: 32px;
   }
-  .content p{
-    color: var(--primarycolor);
-    font-weight: 200;
-    text-align: justify;
-    font-size: 20px;
+  
+  .subtitle {
+    color: var(--thirdcolor);
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
   }
+
   .social a{
     width: 45px;
     height: 45px;
@@ -101,15 +119,62 @@
 
   .social a:hover{
     transform: scale(1.1);
-    background-color: var(--thirdcolor);
+    background: linear-gradient(145deg, #00e3cc, #2f8a8d);
+    color: #121212;
     transition: .4s;
+    box-shadow: 0 0 10px #00e3cc88;
   }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .techno-button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: 2px solid #00e3cc;
+    background-color: transparent;
+    color: #00e3cc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+  }
+
+  .techno-button:hover {
+    background-color: #00e3cc;
+    color: #121212;
+    box-shadow: 0 0 15px #00e3ccaa;
+  }
+
+  .techno-button.secondary {
+    border-color: #ffffffaa;
+    color: #ffffffcc;
+  }
+
+  .techno-button.secondary:hover {
+    background-color: #ffffffcc;
+    color: #121212;
+    box-shadow: 0 0 15px #ffffff44;
+  }
+
 
   @media (max-width: 895px) {
   .container {
     padding: 50px;
     flex-direction: column;
     text-align: center;
+  }
+
+  .profile-video {
+    order: -1;
+    margin-left: 0;
+    width: 100%;
+    max-width: 350px;
   }
 
   .content {
@@ -122,10 +187,6 @@
 
   .content h1 {
     font-size: 24px;
-  }
-
-  .content p {
-    font-size: 18px;
   }
 
   .social {
@@ -143,6 +204,10 @@
     height: 300px;
     margin-top: 20px;
   }
+
+  .button-group {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -156,10 +221,6 @@
 
   .content h1 {
     font-size: 22px;
-  }
-
-  .content p {
-    font-size: 16px;
   }
 
   .social a {
