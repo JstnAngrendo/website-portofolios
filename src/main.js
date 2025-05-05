@@ -7,9 +7,9 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faInstagram, faLinkedin, faGithub, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faArrowLeft, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faInstagram, faLinkedin, faGithub, faFacebookSquare, faEnvelope, faArrowLeft);
+library.add(faInstagram, faLinkedin, faGithub, faFacebookSquare, faEnvelope, faArrowLeft, faCodeBranch);
 
 const app = createApp(App)
 app.use(createPinia())
