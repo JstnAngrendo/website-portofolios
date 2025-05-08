@@ -12,11 +12,11 @@
 
       
       <div class="social">
-        <a href="https://www.instagram.com/justinluvian_" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
+        <a href="https://wa.me/6285362060468" target="_blank"><font-awesome-icon icon="fa-brands fa-whatsapp" /></a>
         <a href="https://www.linkedin.com/in/justin-angrendo" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin" /></a>
         <a href="https://github.com/JstnAngrendo" target="_blank"><font-awesome-icon icon="fa-brands fa-github" /></a>
         <a href="mailto:jluvian25@gmail.com" target="_blank"><font-awesome-icon icon="fa-solid fa-envelope" /></a>
-        <a href="https://facebook.com" target="_blank"><font-awesome-icon icon="fa-brands fa-facebook-square" /></a>
+        <a href="https://www.instagram.com/justinluvian_" target="_blank"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
       </div>
     </div>
     <div id="profile-video" class="profile-video"></div>
