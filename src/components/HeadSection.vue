@@ -11,10 +11,46 @@
           <span :class="{ active: menuOpen }"></span>
         </div>
         <ul class="nav-list" :class="{ open: menuOpen }">
-          <li><a @click.prevent="scrollToSection('home')">Home</a></li>
-          <li><a @click.prevent="scrollToSection('skills')">Skills</a></li>
-          <li><a @click.prevent="scrollToSection('project')">Project</a></li>
-          <li><a @click.prevent="scrollToSection('experience')">Experience</a></li>
+          <li>
+            <a 
+              :class="{ 'active-link': currentSection === 'home' }" 
+              @click.prevent="scrollToSection('home')"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              :class="{ 'active-link': currentSection === 'about' }" 
+              @click.prevent="scrollToSection('about')"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              :class="{ 'active-link': currentSection === 'skills' }" 
+              @click.prevent="scrollToSection('skills')"
+            >
+              Skills
+            </a>
+            </li>
+          <li>
+            <a 
+              :class="{ 'active-link': currentSection === 'project' }"
+              @click.prevent="scrollToSection('project')"
+            >
+              Project
+            </a>
+          </li>
+          <li>
+            <a
+            :class="{ 'active-link': currentSection === 'experience' }"
+            @click.prevent="scrollToSection('experience')"
+            >
+              Experience
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -63,6 +99,7 @@
   }
 
   .nav-list li a {
+    position: relative;
     color: var(--primarycolor);
     font-size: 20px;
     font-weight: 600;
@@ -70,8 +107,32 @@
     transition: color 0.3s ease;
   }
 
+  .nav-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #00e3cc;
+    box-shadow: 0 0 8px #00e3cc;
+    transition: width 0.3s ease;
+  }
+
+  .nav-list li a:hover::after {
+    width: 100%;
+  }
+
   .nav-list li a:hover {
-    color: var(--thirdcolor);
+    color: #00e3cc;
+  }
+
+  .nav-list li a.active-link::after {
+    width: 100%;
+  }
+
+  .nav-list li a.active-link {
+    color: #00e3cc;
   }
 
 .hamb {

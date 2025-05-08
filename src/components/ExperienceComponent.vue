@@ -5,20 +5,24 @@
     </div>
     <div class="timeline">
       <div class="line"></div>
+
       <div v-for="(exp, index) in experiences" :key="index" class="section">
         <div class="bead"></div>
-        <div 
-          class="experience-item" 
-          :class="{'left': index % 2 === 0, 'right': index % 2 !== 0}"
-        >
-          <div class="exp">
-            <h2>{{ exp.title }}</h2>
-            <h3>{{ exp.date }}</h3>
-            <p v-html="exp.description"></p>
-            <img v-for="(img, imgIndex) in exp.images" :key="imgIndex" :src="img" alt="Experience Image" />
+        <div class="exp-container">
+          <div 
+            class="experience-item"
+            :class="{'left': index % 2 === 0, 'right': index % 2 !== 0}"
+          >
+            <div class="exp">
+              <h2>{{ exp.title }}</h2>
+              <h3>{{ exp.date }}</h3>
+              <p v-html="exp.description"></p>
+              <img v-for="(img, imgIndex) in exp.images" :key="imgIndex" :src="img" alt="Experience Image" />
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </template>
@@ -27,11 +31,10 @@
 
 <style scoped>
 .experience {
-  padding: 5vw 0vw;
+  padding: 5vw 0;
   width: 100%;
   margin-top: 100px;
-  margin-bottom: 10px;
-  background: #1A2B31;
+  background: transparent;
 }
 
 .eTitle {
@@ -53,7 +56,7 @@
   transform: translateX(-50%);
   width: 78vw;
   height: 2px;
-  background-color: var(--primarycolor);
+  background-color: var(--thirdcolor);
 }
 
 .timeline {
@@ -66,69 +69,120 @@
 
 .line {
   position: absolute;
-  z-index: 1;
   left: 50%;
   width: 2px;
   height: 100%;
-  background-color: var(--primarycolor);
+  background-color: var(--thirdcolor);
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .section {
-  display: flex;
   position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+/* .exp-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   z-index: 2;
-  align-items: center;
-  margin-bottom: 16px;
-  width: 60%;
+}
+
+.experience-item {
+  width: 45%;
+  padding: 16px 24px;
+  background: rgba(26, 43, 49, 0.8);
+  border-radius: 12px;
+  color: var(--primarycolor);
+  text-align: justify;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.experience-item.left {
+  margin-right: auto;
+}
+
+.experience-item.right {
+  margin-left: auto;
+} */
+
+.exp-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: calc(100% - 10rem);
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 2;
+}
+
+.experience-item {
+  max-width: calc(50% - 2rem); 
+  width: 100%;
+  padding: 16px 24px;
+  color: var(--primarycolor);
+  text-align: justify;
+  box-sizing: border-box;
+  /* word-wrap: break-word; */
+  /* overflow-wrap: break-word; */
+  /* background: rgba(26, 43, 49, 0.8); */
+  /* border-radius: 12px; */
+  /* box-shadow: 0 4px 16px rgba(0,0,0,0.2); */
+}
+
+.experience-item.left {
+  margin-right: auto;
+}
+
+.experience-item.right {
+  margin-left: auto;
 }
 
 .bead {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
+  transform: translate(-50%, 0);
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: var(--primarycolor);
-  transform: translate(-50%, -50%);
+  background-color: var(--thirdcolor);
+  z-index: 3;
 }
 
-.experience-item {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 16px 48px;
-  border-radius: 10px;
-  color: var(--primarycolor);
-  text-align: justify;
-}
-
-.experience-item.left {
-  transform: translateX(-25%); 
-  margin-left: 32px;
-}
-
-.experience-item.right {
-  transform: translateX(75%); 
-}
-
-.exp {
-  flex-grow: 1;
-  padding-left: 36px;
-}
-
-.exp h2 {
+/* .exp h2 {
   margin-bottom: 8px;
 }
 
 .exp h3 {
   margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .exp p {
   font-size: 16px;
   font-weight: 300;
+} */
+
+.exp h2 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.exp h3 {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 400
+}
+
+.exp p, .exp ul, .exp li {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 300
 }
 
 .section img {
@@ -136,43 +190,37 @@
   width: 100%;
   max-width: 400px;
 }
+
+
 @media (max-width: 768px) {
-  .experience {
-    padding: 15vw 0vw;
-  }
   .line {
-    display: none;
+    left: 20px;
   }
 
   .bead {
-    left: 0px;
+    left: 20px;
   }
 
-  .section {
-    width: 90%; 
+  .exp-container {
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
+    padding-left: 48px;
   }
 
   .experience-item {
-    width: 80%;
-    transform: none; 
-    margin-left: 32px; 
-    padding: 16px;
+    max-width: calc(100% - 2rem); 
+    width: 100%;
+    margin: 0 0 16px 0;
   }
 
   .experience-item.left,
   .experience-item.right {
-    transform: none;
-    margin-left: 32px;
+    margin: 0;
   }
 
   .exp {
-    padding-left: 0;
-  }
-
-  .section img {
-    max-width: 100%;
+    padding: 0;
   }
 }
+
 </style>
