@@ -170,7 +170,7 @@
       font-weight: 600;
       padding: 5px 10px;
       border-radius: 20px;
-      transition: background 0.3s ease;
+      /* transition: background 0.3s ease; */
     }
 
     .tech-badge:hover {
