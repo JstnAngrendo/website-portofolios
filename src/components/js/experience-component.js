@@ -34,13 +34,13 @@ export default {
       },
       {
         title: 'Scholarship Mentor Bina Nusantara University',
-        date: 'Feb 2024 - Feb 2025',
+        date: 'September 2023 - Jan 2024',
         description: `Mentored 3 Computer Science students in subjects like Compilation Techniques, Operating Systems, Algorithms and Programming, and Object-Oriented Programming, helping them improve their academic performance and build both technical skills and confidence.`,
         images: [certiciateMentorshipImg]
       },
       {
         title: 'Frontend Developer Intern at Blibli.com',
-        date: 'September 2023 - Jan 2024',
+        date: 'Feb 2024 - Feb 2025',
         description: `<ul>
         <li>Worked with the Payment Team to enhance transaction processing UI and optimize payment flows.</li>
         <li>Developed user interfaces (UI) using Vue.js, focusing on HTML structure, CSS styling, and JavaScript functionality.</li>
