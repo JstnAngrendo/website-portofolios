@@ -16,7 +16,7 @@
           Outside of coding, I'm always eager to explore new tools and deepen my understanding of software development. I'm driven by curiosity and a genuine passion to grow both independently and through collaboration with others in the tech community.
         </p>
         <a 
-          href="https://drive.google.com/file/d/1wnzR69aj7dcQlXs7MJbZpm_GGYDCwYDs/view?usp=sharing" 
+          href="https://drive.google.com/file/d/1CNQSpp1DzdZT5kGXoRRAiRFL-dS3svyl/view?usp=sharing" 
           target="_blank" 
           rel="noopener noreferrer"
           class="download-cv-btn" 
